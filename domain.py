@@ -15,3 +15,13 @@ class Ruta:
 
     def __str__(self):
         return str(self.__pctA) + " <-> " + str(self.__pctB) + " = " + str(self.__dist)
+
+    def __gt__(self, other):
+        if self.__dist > other.__dist:
+            return True
+        return False
+
+    def __eq__(self, other):
+        if self.__dist == other.__dist:
+            return True
+        return False
